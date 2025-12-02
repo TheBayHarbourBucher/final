@@ -1,0 +1,295 @@
+[
+  {
+    "id": 1,
+    "name": "Pepperoni Pizza",
+    "image": "images/tomato-mozzarella-pizza-FT-RECIPE0725-e7244e979c504188a049623668c15b2e.jpg",
+    "calories": 650,
+    "time": "30 min",
+    "difficulty": "Medium",
+    "description": "Cheesy, crispy, pepperoni-topped goodness.",
+
+    "ingredients": [
+      { "name": "Pizza Dough", "image": "images/Desktop-Basic-Pizza-Dough.jpg" },
+      { "name": "Tomato Sauce", "image": "images/images (2).jpeg" },
+      { "name": "Mozzarella Cheese", "image": "images/images (3).jpeg" },
+      { "name": "Pepperoni Slices", "image": "images/101389_Castellini-Sliced-Pepperoni-Salami_9326451013897.jpg" },
+      { "name": "Olive Oil", "image": "images/olive.jpeg" },
+      { "name": "Dried Oregano", "image": "ore.jpeg" },
+      { "name": "Salt", "image": "images/salt.webp" }
+    ],
+
+    "method": [
+      "Preheat your oven to 220°C (430°F).",
+      "Place the pizza dough on a lightly floured surface and stretch it into a round shape.",
+      "Brush the dough lightly with olive oil.",
+      "Spread tomato sauce over the dough.",
+      "Sprinkle mozzarella cheese.",
+      "Place pepperoni slices on top.",
+      "Bake for 12–15 minutes until golden.",
+      "Let it rest before slicing."
+    ],
+
+    "tags": ["meat"]
+  },
+
+  {
+    "id": 2,
+    "name": "Belgian Waffles",
+    "image": "images/waffle.jpg",
+    "calories": 420,
+    "time": "20 min",
+    "difficulty": "Easy",
+    "description": "Light, fluffy waffles with a golden crisp finish.",
+
+    "ingredients": [
+      { "name": "All-Purpose Flour", "image": "images/flour.jpg" },
+      { "name": "Milk", "image": "images/milk.jpg" },
+      { "name": "Eggs", "image": "images/eggs.jpg" },
+      { "name": "Butter", "image": "images/butter.jpg" },
+      { "name": "Sugar", "image": "images/sugar.jpg" },
+      { "name": "Baking Powder", "image": "images/baking-powder.jpg" },
+      { "name": "Salt", "image": "images/salt.jpg" },
+      { "name": "Vanilla Extract", "image": "images/vanilla.jpg" }
+    ],
+
+    "method": [
+      "Preheat waffle maker.",
+      "Mix dry ingredients.",
+      "Whisk eggs, milk, butter, and vanilla.",
+      "Combine wet and dry ingredients.",
+      "Cook in waffle maker until crisp."
+    ],
+
+    "tags": []
+  },
+
+  {
+    "id": 3,
+    "name": "Garden Salad",
+    "image": "images/salad.webp",
+    "calories": 180,
+    "time": "10 min",
+    "difficulty": "Easy",
+    "description": "Fresh crunchy mixed vegetables.",
+
+    "ingredients": [
+      { "name": "Lettuce", "image": "images/lettuce.jpg" },
+      { "name": "Cherry Tomatoes", "image": "images/tomatoes.jpg" },
+      { "name": "Cucumber", "image": "images/cucumber.jpg" },
+      { "name": "Carrots", "image": "images/carrots.jpg" },
+      { "name": "Red Onion", "image": "images/red-onion.jpg" },
+      { "name": "Olive Oil", "image": "images/olive-oil.jpg" },
+      { "name": "Lemon Juice", "image": "images/lemon.jpg" },
+      { "name": "Salt", "image": "images/salt.jpg" },
+      { "name": "Pepper", "image": "images/pepper.jpg" }
+    ],
+
+    "method": [
+      "Wash vegetables.",
+      "Chop ingredients.",
+      "Add to bowl.",
+      "Drizzle with olive oil and lemon juice.",
+      "Season and toss."
+    ],
+
+    "tags": ["vegan", "gluten free"]
+  },
+
+  {
+    "id": 4,
+    "name": "Classic Hamburger",
+    "image": "images/burger.jpg",
+    "calories": 550,
+    "time": "25 min",
+    "difficulty": "Medium",
+    "description": "Juicy beef burger with toppings.",
+
+    "ingredients": [
+      { "name": "Beef Patty", "image": "images/beef-patty.jpg" },
+      { "name": "Hamburger Bun", "image": "images/bun.jpg" },
+      { "name": "Lettuce", "image": "images/lettuce.jpg" },
+      { "name": "Tomato Slices", "image": "images/tomatoes.jpg" },
+      { "name": "Cheddar Cheese", "image": "images/cheese.jpg" },
+      { "name": "Onion Slices", "image": "images/onion.jpg" },
+      { "name": "Pickles", "image": "images/pickles.jpg" },
+      { "name": "Ketchup", "image": "images/ketchup.jpg" },
+      { "name": "Mustard", "image": "images/mustard.jpg" },
+      { "name": "Salt", "image": "images/salt.jpg" },
+      { "name": "Pepper", "image": "images/pepper.jpg" }
+    ],
+
+    "method": [
+      "Season patty.",
+      "Cook patty until done.",
+      "Toast bun.",
+      "Assemble ingredients.",
+      "Serve hot."
+    ],
+
+    "tags": ["meat"]
+  },
+
+  {
+    "id": 5,
+    "name": "Garlic Naan",
+    "image": "images/naan.webp",
+    "calories": 300,
+    "time": "40 min",
+    "difficulty": "Medium",
+    "description": "Soft naan with garlic butter.",
+
+    "ingredients": [
+      { "name": "All-Purpose Flour", "image": "images/flour.jpg" },
+      { "name": "Yogurt", "image": "images/yogurt.jpg" },
+      { "name": "Warm Water", "image": "images/water.jpg" },
+      { "name": "Instant Yeast", "image": "images/yeast.jpg" },
+      { "name": "Sugar", "image": "images/sugar.jpg" },
+      { "name": "Salt", "image": "images/salt.jpg" },
+      { "name": "Butter", "image": "images/butter.jpg" },
+      { "name": "Garlic", "image": "images/garlic.jpg" },
+      { "name": "Coriander", "image": "images/coriander.jpg" }
+    ],
+
+    "method": [
+      "Activate yeast.",
+      "Mix dough.",
+      "Let rise.",
+      "Roll out.",
+      "Cook on pan.",
+      "Brush with garlic butter."
+    ],
+
+    "tags": []
+  },
+
+  {
+    "id": 6,
+    "name": "Lasagna",
+    "image": "images/lasa.webp",
+    "calories": 680,
+    "time": "1 hr",
+    "difficulty": "Hard",
+    "description": "Layered pasta with rich sauce.",
+
+    "ingredients": [
+      { "name": "Lasagna Sheets", "image": "images/lasagna-sheets.jpg" },
+      { "name": "Ground Beef", "image": "images/beef.jpg" },
+      { "name": "Tomato Sauce", "image": "images/tomato-sauce.jpg" },
+      { "name": "Ricotta Cheese", "image": "images/ricotta.jpg" },
+      { "name": "Mozzarella Cheese", "image": "images/mozzarella.jpg" },
+      { "name": "Parmesan Cheese", "image": "images/parmesan.jpg" },
+      { "name": "Onion", "image": "images/onion.jpg" },
+      { "name": "Garlic", "image": "images/garlic.jpg" },
+      { "name": "Olive Oil", "image": "images/olive-oil.jpg" },
+      { "name": "Salt", "image": "images/salt.jpg" },
+      { "name": "Pepper", "image": "images/pepper.jpg" }
+    ],
+
+    "method": [
+      "Cook onions and garlic.",
+      "Brown beef.",
+      "Add tomato sauce.",
+      "Layer ingredients.",
+      "Bake until golden."
+    ],
+
+    "tags": ["meat"]
+  },
+
+  {
+    "id": 7,
+    "name": "Ramen",
+    "image": "images/ramen.webp",
+    "calories": 450,
+    "time": "20 min",
+    "difficulty": "Medium",
+    "description": "Japanese noodles in hot broth.",
+
+    "ingredients": [
+      { "name": "Ramen Noodles", "image": "images/ramen-noodles.jpg" },
+      { "name": "Chicken Broth", "image": "images/chicken-broth.jpg" },
+      { "name": "Soy Sauce", "image": "images/soy-sauce.jpg" },
+      { "name": "Egg", "image": "images/egg.jpg" },
+      { "name": "Green Onions", "image": "images/green-onion.jpg" },
+      { "name": "Nori", "image": "images/nori.jpg" },
+      { "name": "Sesame Oil", "image": "images/sesame-oil.jpg" },
+      { "name": "Garlic", "image": "images/garlic.jpg" },
+      { "name": "Ginger", "image": "images/ginger.jpg" }
+    ],
+
+    "method": [
+      "Boil broth.",
+      "Add soy sauce and aromatics.",
+      "Cook noodles.",
+      "Assemble bowl.",
+      "Top and serve."
+    ],
+
+    "tags": []
+  },
+
+  {
+    "id": 8,
+    "name": "Beef Wellington",
+    "image": "images/beef.jpg",
+    "calories": 850,
+    "time": "1 hr 30 min",
+    "difficulty": "Hard",
+    "description": "Beef wrapped in pastry crust.",
+
+    "ingredients": [
+      { "name": "Beef Tenderloin", "image": "images/beef.jpg" },
+      { "name": "Puff Pastry", "image": "images/puff-pastry.jpg" },
+      { "name": "Mushrooms", "image": "images/mushrooms.jpg" },
+      { "name": "Prosciutto", "image": "images/prosciutto.jpg" },
+      { "name": "Mustard", "image": "images/mustard.jpg" },
+      { "name": "Butter", "image": "images/butter.jpg" },
+      { "name": "Egg Wash", "image": "images/egg.jpg" },
+      { "name": "Salt", "image": "images/salt.jpg" },
+      { "name": "Pepper", "image": "images/pepper.jpg" }
+    ],
+
+    "method": [
+      "Sear beef.",
+      "Cook mushrooms.",
+      "Wrap beef.",
+      "Cover with pastry.",
+      "Bake until golden."
+    ],
+
+    "tags": ["meat"]
+  },
+
+  {
+    "id": 9,
+    "name": "Beef Stroganoff",
+    "image": "images/eef.jpeg",
+    "calories": 520,
+    "time": "30 min",
+    "difficulty": "Medium",
+    "description": "Creamy Russian beef mushroom stew.",
+
+    "ingredients": [
+      { "name": "Beef Strips", "image": "images/beef.jpg" },
+      { "name": "Mushrooms", "image": "images/mushrooms.jpg" },
+      { "name": "Onion", "image": "images/onion.jpg" },
+      { "name": "Butter", "image": "images/butter.jpg" },
+      { "name": "Sour Cream", "image": "images/sour-cream.jpg" },
+      { "name": "Beef Broth", "image": "images/beef-broth.jpg" },
+      { "name": "Flour", "image": "images/flour.jpg" },
+      { "name": "Salt", "image": "images/salt.jpg" },
+      { "name": "Pepper", "image": "images/pepper.jpg" },
+      { "name": "Paprika", "image": "images/paprika.jpg" }
+    ],
+
+    "method": [
+      "Cook onions and mushrooms.",
+      "Brown beef.",
+      "Add broth.",
+      "Stir in sour cream.",
+      "Simmer until thick."
+    ],
+
+    "tags": ["meat"]
+  }
+]

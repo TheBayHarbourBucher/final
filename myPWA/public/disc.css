@@ -1,0 +1,581 @@
+/* Layout */
+body {
+    font-family: system-ui, -apple-system;
+    margin: 0;
+    background: #f7f3ef;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 16px 20px;
+}
+
+.app-name {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    padding-top: 10px;
+    cursor: pointer;
+}
+
+.app-name img {
+    height: 80px;
+    display: block;
+}
+
+/* --- BANNER AREA --- */
+.banner-wrapper {
+    position: relative;
+    width: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.detailpic {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+}
+
+/* top buttons */
+.top-buttons {
+    position: absolute;
+    top: 14px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px;
+    z-index: 20;
+}
+
+.backbtn, .likebtn {
+    font-size: 26px;
+    border: none;
+    background: rgba(255,255,255,0.5);
+    backdrop-filter: blur(5px);
+    padding: 4px 10px;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+/* overlay text */
+.banner-overlay {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    z-index: 15;
+    color: white;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}
+
+.overlay-title {
+    font-size: 32px;
+    margin: 0;
+    font-weight: 700;
+}
+
+.overlay-desc {
+    margin: 6px 0 0;
+    font-size: 16px;
+    opacity: 0.9;
+}
+
+/* --- STATS SECTION --- */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    padding: 16px;
+}
+
+.stat-box {
+    background: white;
+    padding: 18px;
+    border-radius: 14px;
+    text-align: center;
+    box-shadow: 0 5px 12px rgba(0,0,0,0.08);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.stat-icon {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+}
+
+@media (max-width: 600px) {
+    .stat-box {
+        padding: 10px;
+        font-size: 12px;
+    }
+
+    .stat-icon {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+/* BOX SECTIONS (Ingredients / Method) */
+.section-box {
+    background: white;
+    margin: 20px 16px;
+    padding: 18px;
+    border-radius: 16px;
+    box-shadow: 0 5px 12px rgba(0,0,0,0.06);
+}
+
+
+.section-box h2 {
+    margin-bottom: 12px;
+    font-size: 22px;
+}
+
+.ingredients ul {
+    list-style: none;
+    padding: 0;
+}
+
+.ingredients li {
+    margin-bottom: 10px;
+}
+
+/* Add cart button */
+.addcartbtn {
+    margin-top: 1px;
+    padding: 10px 20px;        /* smaller height + smaller sides */
+    width: auto;               /* ❗ stops filling the whole container */
+    display: inline-block;     /* makes it shrink to its content */
+    background: #ff8c42;
+    border: none;
+    border-radius: 30px;
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+
+    /* transition for hover animation */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.addcartbtn:hover {
+    transform: translateY(-3px) scale(1.03);   /* slight lift + zoom */
+    box-shadow: 0 8px 18px rgba(0,0,0,0.15);   /* glowing shadow */
+}
+
+.method li {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+/* --- CART POPUP --- */
+.cart-popup {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.25s ease;
+    padding: 16px;
+    z-index: 200;
+}
+
+.cart-popup.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.cart-popup-card {
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.18);
+    padding: 18px 20px;
+    max-width: 420px;
+    width: 100%;
+}
+
+.cart-popup-text {
+    margin: 0 0 16px;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.cart-popup-actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.cart-popup-btn {
+    flex: 1 1 160px;
+    border: none;
+    border-radius: 999px;
+    padding: 12px 16px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.view-cart-btn {
+    background: #ff8c42;
+    color: #fff;
+}
+
+.continue-btn {
+    background: #f1f1f1;
+    color: #111;
+}
+/* --- TOP NAV BAR --- */
+.top-nav {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: #f7f3ef;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    /* Add bottom border for separation */
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+.nav-back,
+.nav-heart {
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 6px 10px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-heart .heart-svg {
+    width: 21px;
+    height: 21px;
+}
+
+.nav-heart .heart-path {
+    fill: transparent;
+    stroke: #ff4d4f;
+    transition: fill 0.2s ease, stroke 0.2s ease;
+}
+
+.nav-heart.active .heart-path {
+    fill: #ff4d4f;
+    stroke: transparent;
+}
+
+.nav-back:hover,
+.nav-heart:hover {
+    background: rgba(0,0,0,0.08);
+}
+
+.nav-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+}
+
+/* ----------- INGREDIENT LIST UPGRADE ----------- */
+
+/* Wrapper spacing */
+.ingredients ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Each row */
+.ingredients li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+    font-size: 16px;
+}
+
+/* Remove last border */
+.ingredients li:last-child {
+    border-bottom: none;
+}
+
+/* Container for checkbox + name */
+.ing-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* --- Custom Checkbox --- */
+.ing-checkbox {
+    appearance: none;
+    width: 22px;
+    height: 22px;
+    border: 2px solid #c4c4c4;
+    border-radius: 6px;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.2s;
+    background: white;
+}
+
+.ing-checkbox:hover {
+    border-color: black;
+    transform: scale(1.08);
+}
+
+.ing-checkbox:checked {
+    background: #ff8c42;
+    border-color: #ff8c42;
+}
+
+.ing-checkbox:checked::after {
+    content: "✔";
+    position: absolute;
+    top: -2px;
+    left: 4px;
+    font-size: 16px;
+    color: white;
+    font-weight: bold;
+}
+
+/* Optional amount badge (right side) */
+.ing-amount {
+    background: #ffdfc4;
+    padding: 4px 10px;
+    border-radius: 30px;
+    font-size: 13px;
+    color: #8a4b1d;
+    font-weight: 600;
+}
+/* METHOD SECTION — modern card style */
+.method ol {
+    padding: 0;
+    margin: 0;
+}
+
+.method-step {
+    list-style: none;
+    background: #ffffff;
+    padding: 18px 16px;
+    margin-bottom: 14px;
+    border-radius: 16px;
+    box-shadow: 0 5px 12px rgba(0,0,0,0.06);
+
+    display: flex; 
+    align-items: center;
+    gap: 16px;
+
+    border-left: 6px solid #ff9a4c;
+}
+
+.step-badge {
+    background: #ffffff;
+    color: #000;
+    font-weight: 700;
+    font-size: 18px;
+    width: 38px;
+    height: 38px;
+    border-radius: 12px;
+    border: 0.5px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.step-text {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.5;
+    margin: 0;
+}
+
+
+/* ----- FOOTER SECTION ----- */
+.recipe-footer {
+    text-align: center;
+    padding: 40px 0 60px;
+    color: #555;
+}
+
+.footer-enjoy {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #777;
+}
+
+.footer-link {
+    display: inline-block;
+    margin-top: 8px;
+    font-size: 18px;
+    color: #ff8c42;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+    transform: translateX(-4px);
+}
+
+.app-footer {
+    margin: 30px 0 10px;
+    padding: 16px;
+    border-top: 1px solid rgba(0,0,0,0.08);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+}
+
+.app-footer button {
+    background: #e9e0d7;
+    border: none;
+    border-radius: 999px;
+    padding: 10px 18px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.app-footer button:hover {
+    background: #ddcfc2;
+    transform: translateY(-2px);
+}
+
+.footer-copy {
+    text-align: center;
+    font-size: 12px;
+    color: #777;
+    margin: 10px 0 30px;
+}
+
+.section-title {
+    font-size: 22px;
+    font-weight: 700;
+    margin: 20px 16px 6px; /* spacing so it looks like in your screenshot */
+}
+
+/* =========================================================
+   DARK MODE FOR DESCRIPTION PAGE
+   ========================================================= */
+
+.dark-mode {
+    background: #1e1e1e;
+    color: #f1f1f1;
+}
+
+/* Top navigation bar */
+.dark-mode .top-nav {
+    background: #1e1e1e;
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+}
+
+.dark-mode .nav-back,
+.dark-mode .nav-heart {
+    color: #ffffff;
+}
+
+.dark-mode .nav-back:hover,
+.dark-mode .nav-heart:hover {
+    background: rgba(255,255,255,0.1);
+}
+
+/* STATS BOXES */
+.dark-mode .stat-box {
+        background: #ff8d42;
+    color: #000000;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.6);
+}
+
+/* Ingredients + Method BOXES */
+.dark-mode .section-box {
+    background: #2b2b2b;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+/* Ingredient row separators */
+.dark-mode .ingredients li {
+    border-bottom: 1px solid rgba(255,255,255,0.12);
+}
+
+/* Checkbox unselected */
+.dark-mode .ing-checkbox {
+    background: #2b2b2b;
+    border-color: #aaa;
+}
+
+/* Checkbox when hovering */
+.dark-mode .ing-checkbox:hover {
+    border-color: #fff;
+}
+
+/* Checkbox when checked */
+.dark-mode .ing-checkbox:checked {
+    background: #ff8c42;
+    border-color: #ff8c42;
+}
+
+.dark-mode .ing-amount {
+    background: #3a3a3a;
+    color: #ffb37a;
+}
+
+/* Method steps */
+.dark-mode .method-step {
+    background: #2b2b2b;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+.dark-mode .step-text {
+    color: #ddd;
+}
+
+.dark-mode .step-badge {
+    border-color: #bbb;
+    
+}
+
+/* Footer */
+.dark-mode .recipe-footer {
+    color: #ccc;
+}
+
+.dark-mode .footer-enjoy {
+    color: #ddd;
+}
+
+.dark-mode .footer-link {
+    color: #ff9a5c;
+}
+
+.dark-mode .app-footer {
+    border-color: #333;
+}
+
+.dark-mode .app-footer button {
+    background: #333;
+    color: #fff;
+}
+
+.dark-mode .footer-copy {
+    color: #bbb;
+}

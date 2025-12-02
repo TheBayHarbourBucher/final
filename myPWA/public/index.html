@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>  
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Food Catalogue PWA</title>
+   <link rel="stylesheet" href="style.css">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.6.2/sql-wasm.js"></script>
+   <script src="database.js"></script>
+
+  
+
+
+</head>
+<body>
+<header class="header">
+   <h1 class="app-name"><img src="images/yumly-logo.png" alt="Yumly"></h1>
+
+
+<div class="dropdown">
+       <button id="menu-btn" class="icon-btn" aria-label="Open menu">☰</button>
+
+
+       <div id="dropdown-menu" class="dropdown-content">
+           <button class="menu-link" data-menu-action="fav">❤️Favourites</button>
+           <button class="menu-link" data-menu-action="cart">🛒 My Cart</button>
+           <button class="menu-link" data-menu-action="mode">🌙 Dark Mode</button>
+       </div>
+   </div>
+</header>
+
+
+   <section class="search_bar">
+       <input type="text" class="searchinside" placeholder="Search for a food">
+   </section>
+  
+    <section class="filterbar">
+       <button class="filterbtn active">All</button>
+       <button class="filterbtn">Vegan</button>
+       <button class="filterbtn">Gluten free</button>
+       <button class="filterbtn">Meat</button>
+       
+   </section>
+
+
+
+
+   <main id="the_foods" class="grids">
+   <!-- JavaScript will load cards here -->
+   </main>
+
+   <footer class="app-footer">
+       <button class="app-footer-btn" data-menu-action="fav">Favourites</button>
+       <button class="app-footer-btn" data-menu-action="cart">🛒 My Cart</button>
+       <button class="app-footer-btn" data-menu-action="mode">🌙 Dark Mode</button>
+   </footer>
+   <p class="footer-copy">© 2025 Yumly. All rights reserved.</p>
+   
+   <script src="favouritesDB.js"></script>
+   <script src="menu.js"></script>
+   <script src="script.js"></script>
+
+
+  
+</body>
+</html>
