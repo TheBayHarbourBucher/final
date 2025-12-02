@@ -1,0 +1,279 @@
+/* Main Page Background + Font */
+body{           
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+    margin: 0;           /* no white border on top */
+    padding: 20px;       /* gap between edges and content */
+    background: #f5eee8; /* light background colour with a bit of warmth */
+    color: black;
+}
+
+/* centre content */
+body {
+    max-width: 1100px;   
+    margin: 0 auto;      /* the content will spawn in middle instead of left. */
+}
+
+/* remove link underlines */
+a {
+    text-decoration: none !important;
+    color: inherit !important;
+}
+
+/* header bar */
+.header {
+    display: flex;     /* horizontal */
+    justify-content: space-between;   /* makes it so they is space between */
+    align-items: center;    /* vertically centres in header */
+    margin-bottom: 20px;    /* space below header */
+}
+
+.app-name {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.icon-btn {
+    background: none;    /* makes the button invisible so only the icon shows */
+    border: none;        /* makes the button invisible so only the icon shows */
+    font-size: 24px;
+    cursor: pointer;     /*changes the cursor to a hand when hovering */
+    padding: 4px;        /* gap*/
+}
+
+/* search bar */
+.search_bar {
+    margin-bottom: 15px;
+}
+
+.searchinside {
+    width: calc(100% - 38px);
+    padding: 14px 18px;
+    font-size: 16px;
+    border-radius: 999px;              
+    border: none;
+    outline: none;
+    background: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* filter buttons row */
+.filterbar {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;     /*flex wrap makes it move to next row if not enough space*/
+    margin-bottom: 20px;
+}
+
+/* pill filter buttons */
+.filterbtn {
+    background: #e9e0d7;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 8px 18px;
+    border-radius: 999px;
+    transition: background 0.15s ease, transform 0.15s ease;
+}
+.filterbtn.active
+{
+    background-color: black;
+    color: white;
+    pointer-events: none;
+}
+
+
+.filterbtn:hover {
+    background: #ddcfc2;
+    transform: translateY(-2px);
+}
+
+
+.grids {
+      display: grid;
+    grid-template-columns: 1fr;
+    gap: 22px;
+}
+
+
+@media (min-width: 600px) {
+    .grids {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (min-width: 900px) {
+    .grids {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.small-grids {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 260px));
+    gap: 22px;
+    justify-content: center;
+}
+
+/* Individual card */
+.foodcard {
+    background: #ffffff;
+    border-radius: 22px;
+    overflow: hidden;      /*things that go out the card get cut*/
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;   /*instead of horizontal makes everything vertical*/
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    position: relative;       /* for heart positioning */
+}
+
+/* hover animation for card */
+.foodcard:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.16);
+}
+
+/* image wrapper so pic is a rounded square inside card */
+.image-wrapper {
+    position: relative;
+    margin: 12px 12px 0 12px;
+    border-radius: 18px;
+    overflow: hidden;
+}
+
+/* Card image */
+.foodpic {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;    /*the objects dont get stretched*/
+    display: block;
+}
+
+/* Heart button on top of image */
+.card-heart {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(255, 255, 255, 0.95);
+    border: none;
+    border-radius: 999px;
+    padding: 5px 7px;
+    font-size: 18px;
+    cursor: pointer;
+    z-index: 10;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    transition: transform 0.1s ease;
+}
+
+.card-heart:hover {
+    transform: scale(1.12);
+}
+
+/* Card content area */
+.foodstuff {
+    padding: 12px 16px 16px;
+    text-align: center;  /* align the names on the middle */
+}
+
+/* food name */
+.food-title {
+    font-size: 18px;
+    margin: 4px 0 6px;
+    font-weight: 600;
+}
+
+/* rating text under title */
+.rating-text {
+    font-size: 14px;
+    margin: 0 0 6px;
+}
+
+/* Description text */
+.fooddisc {
+    font-size: 14px;
+    color: #555555;
+    margin: 6px 0 12px;
+}
+
+/* Meta info row: calories, time, difficulty */
+.foodstats {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    font-size: 13px;
+    color: #555555;
+}
+
+.foodstats span {
+    background: #f1e7dd;
+    padding: 6px 10px;
+    border-radius: 999px;
+}
+
+/* dropdown menu */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown box (HIDDEN by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+  border-radius: 8px;
+  z-index: 2000;
+  padding: 10px 0;
+}
+
+/* Dropdown items */
+.dropdown-content p {
+  padding: 10px 16px;
+  margin: 0;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.dropdown-content p:hover {
+  background: #eee;
+}
+/* ---------------- DARK MODE ---------------- */
+.dark-mode {
+    background: #1d1d1d !important;
+    color: #f5f5f5 !important;
+}
+
+.dark-mode .header{
+    background: #1d1d1d;
+}
+.dark-mode .dropdown-content,
+.dark-mode .filterbtn,
+
+.dark-mode .foodcard,
+.dark-mode .section-box,
+.dark-mode .stat-box {
+    background: #2a2a2a !important;
+    color: #fff !important;
+    border-color: #444 !important;
+}
+
+/* buttons */
+.dark-mode .filterbtn {
+    background: #3a3a3a;
+}
+
+.dark-mode .filterbtn:hover {
+    background: #4a4a4a;
+}
+
+/* cards */
+.dark-mode .foodcard {
+    box-shadow: none;
+}
+.dark-mode .icon-btn {
+    color: white;
+}
