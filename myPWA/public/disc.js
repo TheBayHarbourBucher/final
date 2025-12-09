@@ -1,6 +1,4 @@
-// ----------------------
-// CART DATABASE (SQL.js)
-// ----------------------
+
 let db;
 
 async function loadDB() {
@@ -50,9 +48,7 @@ function ensureCartSchema() {
     }
 }
 
-// ----------------------
-// GET FOOD ID & ELEMENTS
-// ----------------------
+
 const urlParams = new URLSearchParams(window.location.search);
 const foodId = urlParams.get("id");
 
@@ -132,9 +128,7 @@ if (cartPopup) {
     });
 }
 
-// ------------------------
-// LOAD FOOD + FILL PAGE
-// ------------------------
+
 fetch("data/foods.json")
     .then(res => res.json())
     .then(async foods => {

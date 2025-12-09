@@ -6,8 +6,8 @@ const searchBox = document.querySelector(".searchinside");
 const searchSection = document.querySelector(".search_bar");
 const filterBar = document.querySelector(".filterbar");
 
-let allFoods = [];  // store all foods for filtering
-let favourites = []; // store favourite IDs
+let allFoods = [];  
+let favourites = []; 
 
 const MENU_FAV_HASH = "#favourites";
 
@@ -66,7 +66,6 @@ fetch("data/foods.json")
 
         allFoods = foods;
 
-// Load SQL favourites before showing foods
 loadFavDB().then(() => {
     favourites = getFavouritesSQL();
     showFoods(allFoods);
@@ -83,9 +82,6 @@ loadFavDB().then(() => {
     });
 
 
-// ------------------------------------------------------------
-// 3. Function to show foods (YOUR CARD DESIGN)
-// ------------------------------------------------------------
 function showFoods(list) {
     container.innerHTML = "";
 
@@ -125,12 +121,7 @@ card.innerHTML = `
 
         container.appendChild(card);
 
-        // ---------------------------
-        // FAVOURITE BUTTON LOGIC
-        // ---------------------------
-        // ---------------------------
-// FAVOURITE BUTTON (SQL)
-// ---------------------------
+     
 let heart = card.querySelector(".card-heart");
 
 const setHeartState = (isFav) => {
@@ -138,30 +129,30 @@ const setHeartState = (isFav) => {
     heart.setAttribute("aria-pressed", String(isFav));
 };
 
-// highlight heart if this food ID is inside SQL favourites
+
 setHeartState(favourites.includes(food.id));
 
 heart.addEventListener("click", function(event) {
-    event.preventDefault(); // stop the link from opening
+    event.preventDefault(); 
 
     if (favourites.includes(food.id)) {
-        // REMOVE from SQL favourites
+       
         removeFavouriteSQL(food.id);
 
-        // update JS list from SQL
+       
         favourites = getFavouritesSQL();
 
-        // update heart icon
+      
         setHeartState(false);
 
     } else {
-        // ADD to SQL favourites
+        
         addFavouriteSQL(food.id);
 
-        // update JS list from SQL
+       
         favourites = getFavouritesSQL();
 
-        // update heart icon
+       
         setHeartState(true);
     }
 });
@@ -201,7 +192,7 @@ function filterFoods(type) {
 }
 
 
-// 6. filter buttons
+
 const buttons = document.querySelectorAll(".filterbtn");
 
 buttons.forEach(btn => {
@@ -223,7 +214,7 @@ menuBtn.addEventListener("click", function () {
     }
 });
 
-// Close dropdown when clicking outside
+
 document.addEventListener("click", function (event) {
     if (!event.target.closest(".dropdown")) {
         dropdown.style.display = "none";

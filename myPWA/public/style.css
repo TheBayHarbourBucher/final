@@ -1,17 +1,17 @@
-/* Main Page Background + Font */
+
 body{           
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 
-    margin: 0;           /* no white border on top */
-    padding: 20px;       /* gap between edges and content */
-    background: #f5eee8; /* light background colour with a bit of warmth */
+    margin: 0;          
+    padding: 20px;      
+    background: #f5eee8; 
     color: black;
 }
 
 /* centre content */
 body {
     max-width: 1100px;   
-    margin: 0 auto;      /* the content will spawn in middle instead of left. */
+    margin: 0 auto;     
 }
 
 /* remove link underlines */
@@ -24,12 +24,12 @@ a {
     display: none !important;
 }
 
-/* header bar */
+
 .header {
-    display: flex;     /* horizontal */
-    justify-content: space-between;   /* makes it so they is space between */
-    align-items: center;    /* vertically centres in header */
-    margin-bottom: 20px;    /* space below header */
+    display: flex;    
+    justify-content: space-between;   
+    align-items: center;   
+    margin-bottom: 20px;   
 }
 
 .app-name {
@@ -46,11 +46,11 @@ a {
 }
 
 .icon-btn {
-    background: none;    /* makes the button invisible so only the icon shows */
-    border: none;        /* makes the button invisible so only the icon shows */
+    background: none;   
+    border: none;       
     font-size: 31px;
-    cursor: pointer;     /*changes the cursor to a hand when hovering */
-    padding: 4px;        /* gap*/
+    cursor: pointer;    
+    padding: 4px;      
 }
 
 #menu-btn {
@@ -77,15 +77,15 @@ a {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
-/* filter buttons row */
+
 .filterbar {
     display: flex;
     gap: 12px;
-    flex-wrap: wrap;     /*flex wrap makes it move to next row if not enough space*/
+    flex-wrap: wrap;   
     margin-bottom: 20px;
 }
 
-/* pill filter buttons */
+
 .filterbtn {
     background: #e9e0d7;
     border: none;
@@ -136,25 +136,25 @@ a {
     justify-content: center;
 }
 
-/* Individual card */
+
 .foodcard {
     background: #ffffff;
     border-radius: 22px;
-    overflow: hidden;      /*things that go out the card get cut*/
+    overflow: hidden;     
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
     display: flex;
-    flex-direction: column;   /*instead of horizontal makes everything vertical*/
+    flex-direction: column;  
     transition: transform 0.2s ease, box-shadow 0.2s ease;
-    position: relative;       /* for heart positioning */
+    position: relative;     
 }
 
-/* hover animation for card */
+
 .foodcard:hover {
     transform: translateY(-6px) scale(1.02);
     box-shadow: 0 14px 30px rgba(0, 0, 0, 0.16);
 }
 
-/* image wrapper so pic is a rounded square inside card */
+
 .image-wrapper {
     position: relative;
     margin: 12px 12px 0 12px;
@@ -162,15 +162,15 @@ a {
     overflow: hidden;
 }
 
-/* Card image */
+
 .foodpic {
     width: 100%;
     height: 170px;
-    object-fit: cover;    /*the objects dont get stretched*/
+    object-fit: cover;   
     display: block;
 }
 
-/* Heart button on top of image */
+
 .card-heart {
     position: absolute;
     top: 10px;
@@ -208,33 +208,33 @@ a {
     stroke: transparent;
 }
 
-/* Card content area */
+
 .foodstuff {
     padding: 12px 16px 16px;
-    text-align: center;  /* align the names on the middle */
+    text-align: center;  
 }
 
-/* food name */
+
 .food-title {
     font-size: 18px;
     margin: 4px 0 6px;
     font-weight: 600;
 }
 
-/* rating text under title */
+
 .rating-text {
     font-size: 14px;
     margin: 0 0 6px;
 }
 
-/* Description text */
+
 .fooddisc {
     font-size: 14px;
     color: #555555;
     margin: 6px 0 12px;
 }
 
-/* Meta info row: calories, time, difficulty */
+
 .foodstats {
     display: flex;
     justify-content: center;
@@ -249,13 +249,13 @@ a {
     border-radius: 999px;
 }
 
-/* dropdown menu */
+
 .dropdown {
   position: relative;
   display: inline-block;
 }
 
-/* Dropdown box (HIDDEN by default) */
+
 .dropdown-content {
   display: none;
   position: absolute;
@@ -315,7 +315,7 @@ a {
     color: #777;
     margin: 10px 0 30px;
 }
-/* ---------------- DARK MODE ---------------- */
+
 .dark-mode {
     background: #1d1d1d !important;
     color: #f5f5f5 !important;
@@ -334,7 +334,7 @@ a {
     border-color: #444 !important;
 }
 
-/* buttons */
+
 .dark-mode .filterbtn {
     background: #3a3a3a;
 }
@@ -348,7 +348,7 @@ a {
     color: #000000;
 }
 
-/* cards */
+
 .dark-mode .foodcard {
     box-shadow: none;
 }
@@ -375,7 +375,7 @@ a {
     color: #bbb;
 }
 .dark-mode .fooddisc {
-    color: #cccccc !important;   /* brighter grey */
+    color: #cccccc !important;  
 }
 
 
